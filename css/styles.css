@@ -178,3 +178,39 @@ nav a:hover {
   max-width: 100%;
   margin: 25px auto;
 }
+
+/* Media Query 1: Medium screens */
+@media screen and (min-width: 600px) {
+    .home-content {
+        width: 90%;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .home-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+}
+
+/* Media Query 2: Large screens */
+@media screen and (min-width: 1000px) {
+    .home-content {
+        width: 85%;
+        max-width: 1000px;
+        padding: 25px;
+    }
+
+    .home-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+}
