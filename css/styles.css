@@ -179,12 +179,12 @@ nav a:hover {
   margin: 25px auto;
 }
 
-/* Media Query 1: Tablets and larger screens */
+/* Media Query 1: Medium screens */
 @media screen and (min-width: 600px) {
     .home-content {
         width: 90%;
         padding: 30px;
-        font-size: 18px;
+        box-sizing: border-box;
     }
 
     .home-content img {
@@ -200,17 +200,17 @@ nav a:hover {
 /* Media Query 2: Large screens */
 @media screen and (min-width: 1000px) {
     .home-content {
-        width: 75%;
-        max-width: 1200px;
-        padding: 40px;
+        width: 85%;
+        max-width: 1000px;
+        padding: 25px;
     }
 
     .home-content img {
-        width: 500px;
+        max-width: 100%;
         height: auto;
     }
 
     nav a {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
