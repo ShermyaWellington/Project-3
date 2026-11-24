@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Google Map</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        #map {
+            width: 100%;
+            height: 500px;
+            border: 4px solid #c9a9ed;
+        }
+    </style>
+</head>
+
+<body class="personal-page">
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="page3.html">Game Design</a></li>
+            <li><a href="map.html">Map</a></li>
+        </ul>
+    </nav>
+
+    <div class="personal-content">
+        <h1>My Google Map</h1>
+        <p>Explore the map and try its different features!</p>
+
+        <div id="map"></div>
+    </div>
+
+    <script>
+        let map;
+
+        function initMap() {
+            const location = { lat: 41.8349, lng: -87.6270 };
+
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: location,
+                zoom: 14,
+                mapTypeControl: true,
+                streetViewControl: true,
+                fullscreenControl: true
+            });
+
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "Illinois Institute of Technology"
+            });
+
+            const infoWindow = new google.maps.InfoWindow({
+                content: "<h3>Illinois Institute of Technology</h3><p>Chicago, Illinois</p>"
+            });
+
+            marker.addListener("click", function() {
+                infoWindow.open(map, marker);
+            });
+        }
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&callback=initMap">
+    </script>
+
+</body>
+</html>
